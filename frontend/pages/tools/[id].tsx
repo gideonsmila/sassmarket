@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import type { Tool } from '../../data/tools';
+import { tools } from '../../data/tools';
 
 interface Review {
   id: number;
@@ -7,24 +9,21 @@ interface Review {
   comment: string;
 }
 
-interface Tool {
-  id: number;
-  name: string;
-  description: string;
+interface ToolDetailData extends Tool {
   reviews: Review[];
 }
 
 export default function ToolDetail() {
   const router = useRouter();
   const { id } = router.query;
-  const [tool, setTool] = useState<Tool | null>(null);
+  const [tool, setTool] = useState<ToolDetailData | null>(null);
 
   useEffect(() => {
     if (id) {
-      fetch(`http://localhost:4000/api/tools/${id}`)
-        .then(res => res.json())
-        .then(setTool)
-        .catch(console.error);
+      const t = tools.find(t => t.id === Number(id));
+      if (t) {
+        setTool({ ...t, reviews: [] });
+      }
     }
   }, [id]);
 

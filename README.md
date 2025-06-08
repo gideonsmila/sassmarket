@@ -6,7 +6,7 @@ backend (NestJS) and frontend (Next.js) applications.
 ## Structure
 
 - `backend/` – NestJS API connecting to PostgreSQL
-- `frontend/` – Next.js React application styled with Tailwind CSS
+- `frontend/` – Next.js React application styled with Tailwind CSS and using shadcn/ui with MagicUI components
 
 ## Getting Started
 
