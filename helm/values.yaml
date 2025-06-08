@@ -1,0 +1,16 @@
+backend:
+  image:
+    repository: node
+    tag: 18
+  replicaCount: 1
+  service:
+    type: ClusterIP
+    port: 4000
+frontend:
+  image:
+    repository: node
+    tag: 18
+  replicaCount: 1
+  service:
+    type: ClusterIP
+    port: 3000

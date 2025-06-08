@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "saas-investigator.fullname" . }}-backend
+spec:
+  type: {{ .Values.backend.service.type }}
+  selector:
+    app: {{ include "saas-investigator.name" . }}-backend
+  ports:
+    - port: {{ .Values.backend.service.port }}
+      targetPort: {{ .Values.backend.service.port }}
+      protocol: TCP
+      name: http
