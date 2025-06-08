@@ -22,6 +22,9 @@ export default function Home() {
         <Link href="/tools?category=Security">
           <Button>Security</Button>
         </Link>
+        <Link href="/all-tools">
+          <Button variant="outline">All Tools</Button>
+        </Link>
       </div>
     </main>
   );
