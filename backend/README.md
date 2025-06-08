@@ -1,6 +1,6 @@
 # SaaS Investigator Backend
 
-Express.js API for the SaaS Investigator platform.
+NestJS API for the SaaS Investigator platform.
 
 ## Development
 

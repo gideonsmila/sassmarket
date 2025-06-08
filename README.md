@@ -1,11 +1,11 @@
 # SaaS Investigator
 
 A marketplace investigation platform for SaaS tools. This repository contains both
-backend (Express.js) and frontend (Next.js) applications.
+backend (NestJS) and frontend (Next.js) applications.
 
 ## Structure
 
-- `backend/` – Express API connecting to PostgreSQL
+- `backend/` – NestJS API connecting to PostgreSQL
 - `frontend/` – Next.js React application styled with Tailwind CSS
 
 ## Getting Started
