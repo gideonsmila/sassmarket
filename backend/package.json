@@ -1,18 +1,24 @@
 {
   "name": "saas-investigator-backend",
   "version": "0.1.0",
-  "main": "src/server.js",
+  "main": "dist/main.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "nodemon --watch src --exec ts-node src/main.ts"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "cors": "^2.8.5",
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/platform-express": "^10.0.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0",
     "pg": "^8.11.0",
     "dotenv": "^16.3.1"
   },
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.2",
+    "typescript": "^5.2.2",
+    "ts-node": "^10.9.1"
   }
 }
