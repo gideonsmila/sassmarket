@@ -7,5 +7,8 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('magicui/plugin'),
+    require('@shadcn/ui/plugin'),
+  ],
 };
